@@ -26,6 +26,22 @@ To start a simple image build:
 $: source ./setup-environment build
 $: bitbake core-image-minimal
 
+To start a cm-fx6 evaluation image build:
+
+[source,console]
+$: MACHINE=cm-fx6 source ./setup-environment build
+$: bitbake compulab-eval-image
+
+To build kernel only:
+
+[source,console]
+$: bitbake linux-compulab
+
+To build U-Boot only:
+
+[source,console]
+$: bitbake u-boot-compulab
+
 You can use any directory to host your build.
 
 The source code is checked out at `compulab-bsp/sources`.

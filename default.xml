@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="krogoth"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/compulab-yokneam" name="compulab"/>
+  <remote fetch="https://github.com/OSSystems" name="oss"/>
+  <remote fetch="git://github.com/meta-qt5" name="meta-qt5-repo"/>
+
+  <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="compulab" revision="krogoth" name="compulab-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="freescale" revision="krogoth" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="krogoth" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="krogoth" name="Documentation" path="sources/Documentation"/>
+  <!-- Lock to last master branch revision before the blacklist - Waiting for fix or krogoth branch -->
+  <project remote="oss" revision="5882f0efb19f7428df3e170ffb08d5d654277382" name="meta-browser" path="sources/meta-browser"/>
+  <project remote="meta-qt5-repo" name="meta-qt5" path="sources/meta-qt5" revision="krogoth" />
+  <project remote="compulab" name="meta-compulab" path="sources/meta-compulab" revision="krogoth" />
+
+</manifest>

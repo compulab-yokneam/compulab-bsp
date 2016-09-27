@@ -26,10 +26,10 @@ To start a simple image build:
 $: source ./setup-environment build
 $: bitbake core-image-minimal
 
-To start a cm-fx6 evaluation image build:
+To start a cm-fx6-evk evaluation image build:
 
 [source,console]
-$: MACHINE=cm-fx6 source ./setup-environment build
+$: MACHINE=cm-fx6-evk source ./setup-environment build
 $: bitbake compulab-eval-image
 
 To build kernel only:

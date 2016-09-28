@@ -32,6 +32,12 @@ To start a cm-fx6-evk evaluation image build:
 $: MACHINE=cm-fx6-evk source ./setup-environment build
 $: bitbake compulab-eval-image
 
+How to Deploy:
+To deploy the image file to a sdcard, issue this command. 
+NOTE: Assuming the sdcard device file is */dev/sdg*
+[source,console]
+$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | sudo dd of=/dev/sdg
+
 To build kernel only:
 
 [source,console]

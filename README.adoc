@@ -20,24 +20,26 @@ $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
 
-To start a cm-fx6-evk evaluation image build:
+*To start a cm-fx6-evk evaluation image build:*
 
 [source,console]
 $: MACHINE=cm-fx6-evk source ./setup-environment build
 $: bitbake compulab-eval-image
 
-How to Deploy:
+*How to Deploy:*
+[%hardbreaks]
 To deploy the image file to a sdcard, issue this command. 
-[NOTE] Assuming the sdcard device file is */dev/sdg*
+Assuming the sdcard device file is *_/dev/sdg_*
+
 [source,console]
 $: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | sudo dd of=/dev/sdg
 
-To build kernel only:
+*To build kernel only:*
 
 [source,console]
 $: bitbake linux-compulab
 
-To build U-Boot only:
+*To build U-Boot only:*
 
 [source,console]
 $: bitbake u-boot-compulab

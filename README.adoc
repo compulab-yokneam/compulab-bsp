@@ -53,8 +53,8 @@ $: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | s
 . Issue:
 [%hardbreaks]
 [source,console]
-$: env default -a
-$: savenv
-$: reset
+CM-FX6 # env default -a
+CM-FX6 # savenv
+CM-FX6 # reset
 . Let the device boot up
 . Evaluate this Yocto Release

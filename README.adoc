@@ -26,14 +26,6 @@ At the end of the commands you have every metadata you need to start work with.
 $: MACHINE=cm-fx6-evk source ./setup-environment build
 $: bitbake compulab-eval-image
 
-*How to Deploy:*
-[%hardbreaks]
-To deploy the image file to an sdcard, issue this command. 
-Assuming the sdcard device file is *_/dev/sdg_*
-
-[source,console]
-$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | sudo dd of=/dev/sdg
-
 *To build kernel only:*
 
 [source,console]
@@ -44,6 +36,26 @@ $: bitbake linux-compulab
 [source,console]
 $: bitbake u-boot-compulab
 
-You can use any directory to host your build.
+You can use any directory to host your build. The source code is checked out at `compulab-bsp/sources`.
 
-The source code is checked out at `compulab-bsp/sources`.
+*How to Deploy:*
+[%hardbreaks]
+To deploy the image file to an sdcard, issue this command. 
+Assuming the sdcard device file is *_/dev/sdg_*
+
+[source,console]
+$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | sudo dd of=/dev/sdg
+
+*How to Evaluate:*
+[%hardbreaks]
+* Insert the sd-card into the SB-FX6 P6 slot;
+* Power up the device;
+* Stop in U-Boot;
+* Issue:
+[%hardbreaks]
+[source,console]
+$: env default -a
+$: savenv
+$: reset
+* Let the device boot up.
+* Evaluate this Yocto Release.

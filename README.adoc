@@ -28,7 +28,7 @@ $: bitbake compulab-eval-image
 
 *How to Deploy:*
 [%hardbreaks]
-To deploy the image file to a sdcard, issue this command. 
+To deploy the image file to an sdcard, issue this command. 
 Assuming the sdcard device file is *_/dev/sdg_*
 
 [source,console]

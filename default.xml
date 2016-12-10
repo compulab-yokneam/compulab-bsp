@@ -9,6 +9,7 @@
   <remote fetch="https://github.com/compulab-yokneam" name="compulab"/>
   <remote fetch="https://github.com/OSSystems" name="oss"/>
   <remote fetch="git://github.com/meta-qt5" name="meta-qt5-repo"/>
+  <remote fetch="git://git.freescale.com/imx" name="fsl-release"/>
 
   <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
   <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
@@ -20,6 +21,10 @@
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
+  <project remote="fsl-release"  revision="krogoth_4.1.15-2.0.1" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release">
+     <copyfile src="imx/README" dest="README-IMXBSP"/>
+  </project>
+	
   <project remote="freescale" revision="krogoth" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="freescale" revision="krogoth" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
   <project remote="freescale" revision="krogoth" name="Documentation" path="sources/Documentation"/>

@@ -44,7 +44,7 @@ To deploy the image file to an sdcard, issue this command.
 Assuming the sdcard device file is *_/dev/sdg_*
 
 [source,console]
-$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.tar.xz | sudo dd of=/dev/sdg
+$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.sdcard.xz | sudo dd of=/dev/sdg
 
 ## How to Evaluate:
 . Insert the sd-card into the SB-FX6 P6 slot

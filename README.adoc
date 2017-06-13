@@ -15,7 +15,7 @@ $: chmod a+x ~/bin/repo
 $: PATH=${PATH}:~/bin
 $: mkdir compulab-bsp
 $: cd compulab-bsp
-$: repo init -u https://github.com/compulab-yokneam/compulab-bsp -b krogoth
+$: repo init -u https://github.com/compulab-yokneam/compulab-bsp -b morthy
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.

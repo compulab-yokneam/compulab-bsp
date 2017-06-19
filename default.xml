@@ -22,9 +22,6 @@
   </project>
 
   <project remote="fsl-release"  revision="imx-morty" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release">
-     <copyfile src="imx/README" dest="README-IMXBSP"/>
-  </project>
-	
   <project remote="freescale" revision="morty" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" revision="morty" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
   <project remote="freescale" revision="morty" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>

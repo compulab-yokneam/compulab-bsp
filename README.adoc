@@ -58,7 +58,7 @@ To deploy the image file to an sdcard, issue this command.
 Assuming the sdcard device file is *_/dev/sdg_*
 
 [source,console]
-$: xz -dc tmp/deploy/images/${IMAGE}/${IMAGE}-${MACHINE}.sdcard.xz | sudo dd of=/dev/sdg
+$: xz -dc tmp/deploy/images/${MACHINE}/${IMAGE}-${MACHINE}.sdcard.xz | sudo dd of=/dev/sdg
 
 ## How to Evaluate:
 . Insert the sd-card into the SB-FX6 P6 slot
@@ -67,8 +67,8 @@ $: xz -dc tmp/deploy/images/${IMAGE}/${IMAGE}-${MACHINE}.sdcard.xz | sudo dd of=
 . Issue:
 [%hardbreaks]
 [source,console]
-CM-FX6 # env default -a
-CM-FX6 # savenv
-CM-FX6 # reset
+# env default -a
+# savenv
+# reset
 . Let the device boot up
 . Evaluate this Yocto Release

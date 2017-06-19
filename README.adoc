@@ -19,24 +19,38 @@ $: repo init -u https://github.com/compulab-yokneam/compulab-bsp -b morthy
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
+You can use any directory to host your build. The source code is checked out at `compulab-bsp/sources`.
 
-## To start a cm-fx6-evk evaluation image build:
-
+## Build Procedure
+### Select an available machine: cm-fx6-evk/cl-som-imx6
 [source,console]
-$: MACHINE=cm-fx6-evk source ./setup-environment build
-$: bitbake compulab-eval-image
+$: export MACHINE=cm-fx6-evk
+or
+$: export MACHINE=cl-som-imx6
 
-## To build kernel only:
+### Select an available image: compulab-eval-image/compulab-eval-image-xfce
+[source,console]
+$: export IMAGE=compulab-eval-image
+or
+$: export IMAGE=compulab-eval-image-xfce
+
+### Setup Build Environment
+[source,console]
+$: source ./setup-environment build
+
+### Build Evaluation Image
+[source,console]
+$: bitbake ${IMAGE}
+
+### Build kernel only
 
 [source,console]
 $: bitbake linux-compulab
 
-## To build U-Boot only:
+### Build U-Boot only
 
 [source,console]
 $: bitbake u-boot-compulab
-
-You can use any directory to host your build. The source code is checked out at `compulab-bsp/sources`.
 
 ## How to Deploy:
 [%hardbreaks]
@@ -44,7 +58,7 @@ To deploy the image file to an sdcard, issue this command.
 Assuming the sdcard device file is *_/dev/sdg_*
 
 [source,console]
-$: xz -dc tmp/deploy/images/cm-fx6-evk/compulab-eval-image-cm-fx6-evk.sdcard.xz | sudo dd of=/dev/sdg
+$: xz -dc tmp/deploy/images/${IMAGE}/${IMAGE}-${MACHINE}.sdcard.xz | sudo dd of=/dev/sdg
 
 ## How to Evaluate:
 . Insert the sd-card into the SB-FX6 P6 slot

@@ -27,6 +27,6 @@
   <project remote="freescale" revision="morty" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
   <project remote="oss" revision="c8774d14caef4b26dee292562fec9540c359c61b" name="meta-browser" path="sources/meta-browser"/>
   <project remote="meta-qt5-repo" name="meta-qt5" path="sources/meta-qt5" revision="morty" />
-  <project remote="compulab" name="meta-compulab" path="sources/meta-compulab" revision="morty" />
+  <project remote="compulab" name="meta-compulab" path="sources/meta-compulab" revision="devel" />
 
 </manifest>

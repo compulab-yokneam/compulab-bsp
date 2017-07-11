@@ -30,6 +30,6 @@
   <project remote="freescale" revision="krogoth" name="Documentation" path="sources/Documentation"/>
   <project remote="oss" revision="krogoth" name="meta-browser" path="sources/meta-browser"/>
   <project remote="meta-qt5-repo" name="meta-qt5" path="sources/meta-qt5" revision="krogoth" />
-  <project remote="compulab" name="meta-compulab" path="sources/meta-compulab" revision="krogoth" />
+  <project remote="compulab" name="meta-compulab" path="sources/meta-compulab" revision="devel" />
 
 </manifest>
